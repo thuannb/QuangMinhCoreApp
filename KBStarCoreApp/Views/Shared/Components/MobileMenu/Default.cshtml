@@ -1,0 +1,29 @@
+﻿@model List<LINhVatTuViewModel>
+<div id="mobile-menu">
+    <ul>
+        <li>
+            <a href="/" class="home1">Home</a>
+        </li>
+        <li>
+            <a href="/products.html">Products</a>
+            <ul>
+                @foreach (var item in Model.Where(x => x.Ma_Nh_Vt_Parent == null))
+                {
+                    <li>
+                        <a href="/@item.SeoAlias-c.@(item.Ma_Nh_Vt).html">@item.Ten_Nh_Vt </a>
+                        @if (Model.Any(x => x.Ma_Nh_Vt_Parent == item.Ma_Nh_Vt))
+                        {
+                            <ul>
+                                @foreach (var subItem in Model.Where(x => x.Ma_Nh_Vt_Parent == item.Ma_Nh_Vt))
+                                {
+                                    <li><a href="/@subItem.SeoAlias-c.@(subItem.Ma_Nh_Vt).html"><span>@subItem.Ten_Nh_Vt</span></a></li>
+                                }
+                            </ul>
+                        }
+                    </li>
+                }
+            </ul>
+        </li>
+
+    </ul>
+</div>

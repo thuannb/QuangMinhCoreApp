@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "mustache.js@2.3.0",
+      "destination": "wwwroot/lib/mustache"
+    },
+    {
+      "library": "twbs-pagination@1.4.1",
+      "destination": "wwwroot/lib/twbs-pagination/"
+    },
+    {
+      "library": "ckeditor@4.7.3",
+      "destination": "wwwroot/lib/ckeditor/"
+    },
+    {
+      "library": "jquery-treegrid@0.2.0",
+      "destination": "wwwroot/lib/jquery-treegrid/"
+    },
+    {
+      "library": "bootstrap-datepicker@1.7.1",
+      "destination": "wwwroot/lib/bootstrap-datepicker/"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="EPPlus.Core" Version="1.5.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KBStarCoreApp.Data\KBStarCoreApp.Data.csproj" />
+    <ProjectReference Include="..\KBStarCoreApp.EF\KBStarCoreApp.Data.EF.csproj" />
+    <ProjectReference Include="..\KBStarCoreApp.Utilities\KBStarCoreApp.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>

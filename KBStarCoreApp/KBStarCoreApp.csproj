@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <UserSecretsId>aspnet-KBStarCoreApp-f19e0fab-ae2b-40b3-921e-eb6b071337af</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="bundleconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bundleconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="EPPlus.Core" Version="1.5.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+    <PackageReference Include="PaulMiami.AspNetCore.Mvc.Recaptcha" Version="1.2.2" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="3.0.0" />
+    <PackageReference Include="SkiaSharp" Version="2.88.8" />
+    <PackageReference Include="WebMarkupMin.AspNetCore3" Version="2.16.0" />
+    <PackageReference Include="WebMarkupMin.NUglify" Version="2.16.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KBStarCoreApp.Application.Dapper\KBStarCoreApp.Application.Dapper.csproj" />
+    <ProjectReference Include="..\KBStarCoreApp.Application\KBStarCoreApp.Application.csproj" />
+    <ProjectReference Include="..\KBStarCoreApp.Data\KBStarCoreApp.Data.csproj" />
+    <ProjectReference Include="..\KBStarCoreApp.EF\KBStarCoreApp.Data.EF.csproj" />
+    <ProjectReference Include="..\KBStarCoreApp.Infrastructure\KBStarCoreApp.Infrastructure.csproj" />
+    <ProjectReference Include="..\KBStarCoreApp.Utilities\KBStarCoreApp.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>

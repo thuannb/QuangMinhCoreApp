@@ -1,0 +1,37 @@
+﻿@model List<LINhVatTuViewModel>
+
+<div class="navleft-container">
+    <div class="mega-menu-title">
+        <h3><span>Tất cả danh mục</span></h3>
+    </div>
+
+    <!-- Shop by category -->
+    <div class="mega-menu-category">
+        <ul class="nav">
+            @foreach (var item in Model.Where(x => x.Ma_Nh_Vt_Parent == null))
+            {
+                if (Model.Any(x => x.Ma_Nh_Vt_Parent == item.Ma_Nh_Vt))
+                {
+                    <li>
+                        <a href="/@item.SeoAlias-c.@(item.Ma_Nh_Vt).html">@item.Ten_Nh_Vt</a>
+                        <div class="wrap-popup column1">
+                            <div class="popup">
+                                <ul class="nav">
+                                    @foreach (var subItem in Model.Where(x => x.Ma_Nh_Vt_Parent == item.Ma_Nh_Vt))
+                                    {
+                                        <li><a href="/@subItem.SeoAlias-c.@(subItem.Ma_Nh_Vt).html"><span>@subItem.Ten_Nh_Vt</span></a></li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                }
+                else
+                {
+                    <li class="nosub"><a href="/@item.SeoAlias-c.@(item.Ma_Nh_Vt).html">@item.Ten_Nh_Vt</a></li>
+                }
+            }
+        </ul>
+    </div>
+</div>
